@@ -35,7 +35,13 @@ let awayTeamGoals2014 = fifaData.filter(function(item){
 console.log('Task 1 d:', awayTeamGoals2014[0]['Away Team Goals']);
 
 //(e) Winner of 2014 world cup final */
-
+function winner(){
+    if(finalsHomeTeam2014[0]['Home Team Goals'] > finalsHomeTeam2014[0]['Away Team Goals']) {
+        return `World Cup Winner: ${finalsHomeTeam2014[0]['Home Team Name']}`
+    } else {
+        return `World Cup Winner: ${finalsHomeTeam2014[0]['Away Team Name']}`
+    }
+}
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
